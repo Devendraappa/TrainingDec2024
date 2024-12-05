@@ -20,7 +20,7 @@ jobs:
  echo-goodbye-fixed:
     runs-on: ubuntu-latest
     steps:
-      - name: Fixed step
+      - name: Fixed Step
         run: |
           echo "I have fixed the failure"
       - name: Say goodbye
