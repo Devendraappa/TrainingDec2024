@@ -1,4 +1,7 @@
 Good code
 Better code
+<<<<<<< HEAD
 Buggy code
 More changes
+=======
+>>>>>>> parent of fb646ca (Introduce a bug)
