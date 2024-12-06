@@ -3,8 +3,8 @@ name: 02 - Workflow Events
 on:
   push:
   pull_request:
-  schedule:
-    - cron: "* * * * *" # Runs every five mins
+  #schedule:
+    #- cron: "* * * * *" # Runs every five mins
   workflow_dispatch:
 
 jobs:
