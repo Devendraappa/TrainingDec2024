@@ -15,7 +15,7 @@ jobs:
   path-change-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Print changed paths
+      - name: Get modified files
         run: |
           echo "Modified files:"
-          git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+          git diff --name-only HEAD~1 HEAD
