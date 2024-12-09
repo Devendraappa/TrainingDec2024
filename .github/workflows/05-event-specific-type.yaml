@@ -22,4 +22,4 @@ jobs:
       - name: Print Event Info
         run: |
           echo "Triggered on: $GITHUB_EVENT_NAME"
-          echo "Event details: ${{ toJson(github.event) }}"
+          echo "Event details: ${{github.event.action}}"
