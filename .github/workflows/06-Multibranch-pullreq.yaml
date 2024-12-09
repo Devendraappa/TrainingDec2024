@@ -1,0 +1,15 @@
+name: Multi-Branch Pull Request Workflow
+
+on:
+  pull_request:
+    branches:
+      - 'main'        # Trigger workflow for PRs targeting 'main' branch
+      - 'feature/*'   # Trigger workflow for PRs targeting any branch that starts with 'feature/'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run tests
+        run: echo "Running tests on pull request targeting ${{ github.event.pull_request.base.ref }} branch."
