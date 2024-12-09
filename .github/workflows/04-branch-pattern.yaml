@@ -1,0 +1,6 @@
+name: Branch pattern for push
+on:
+  push:
+    branches:
+      - main       # Trigger on pushes to 'main' branch
+      - 'feature/*' # Trigger on any branch starting with 'feature/
