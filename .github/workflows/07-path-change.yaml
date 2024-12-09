@@ -15,6 +15,11 @@ jobs:
   path-change-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Print changed paths
+      - name: Get modified files
         run: |
-          echo "Triggered by a change in paths: ${{ github.event.head_commit.modified }}"
+          echo "Modified files:"
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }}
+
+      - name: Print message
+        run: |
+          echo "Triggered by a change in specified paths."
