@@ -17,4 +17,5 @@ jobs:
     steps:
       - name: Print changed paths
         run: |
-          echo "Triggered by a change in paths: ${{ github.event.before }}"
+          echo "Modified files:"
+          git diff --name-only ${{ github.event.before }} ${{ github.sha }}
