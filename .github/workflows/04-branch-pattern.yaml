@@ -1,6 +1,15 @@
-name: Branch pattern for push
+name: Branch Pattern Example
+
 on:
   push:
     branches:
-      - main       # Trigger on pushes to 'main' branch
-      - 'feature/*' # Trigger on any branch starting with 'feature/
+      - main       # Trigger on pushes to the 'main' branch
+      - 'feature/*' # Trigger on pushes to any branch starting with 'feature/'
+
+jobs:
+  branch-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Display branch info
+        run: echo "Branch:${{ github.ref_name }}"
