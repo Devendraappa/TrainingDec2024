@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "src/**"       # Only trigger when files in the "src" directory change
+      - "test1.txt" 
       - "README.md"    # Or when README.md changes
   pull_request:
     paths:
