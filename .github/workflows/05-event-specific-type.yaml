@@ -11,6 +11,8 @@ on:
   issues:
     types:
       - created        # Trigger when an issue is created
+      - opened
+      - closed
 
 jobs:
   build:
