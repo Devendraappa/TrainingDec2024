@@ -1,4 +1,2 @@
 hello world
-updated new
-hello
-hi
+updated new code
