@@ -16,4 +16,8 @@ jobs:
     steps:
       - name: Show Triggered Files
         run: |
-         echo "${{ github.event.commits[0].modified }}"
+          echo "This workflow was triggered by changes in specific paths."
+          echo "Files changed in this event:"
+          echo "${{ github.event.commits[0].added }}"
+          echo "${{ github.event.commits[0].modified }}"
+          echo "${{ github.event.commits[0].removed }}"
