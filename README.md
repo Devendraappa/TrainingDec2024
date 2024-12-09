@@ -1,3 +1,2 @@
 # TrainingDec2024
-updated readme
-hello
+updated readme latest
