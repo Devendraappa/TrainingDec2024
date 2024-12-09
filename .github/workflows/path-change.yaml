@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: Show Triggered Files
         run: |
-          echo "Changed files: ${{ github.event.commits }}"
+         echo "${{ github.event.commits[0].modified }}"
