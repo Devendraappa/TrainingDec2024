@@ -1,0 +1,23 @@
+name: Event Type Workflow Example
+
+on:
+  pull_request:
+    types:
+      - opened         # Trigger when a pull request is opened
+      - synchronize    # Trigger when pull request commits are updated
+  release:
+    types:
+      - created        # Trigger when a release is created
+  issues:
+    types:
+      - created        # Trigger when an issue is created
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Event Info
+        run: |
+          echo "Triggered on: $GITHUB_EVENT_NAME"
+          echo "Event details: ${{ toJson(github.event) }}"
