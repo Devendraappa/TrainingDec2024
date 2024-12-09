@@ -14,7 +14,10 @@ jobs:
   path-change-check:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Changed Files
+      - name: Show Triggered Files
         run: |
-          echo "This workflow is triggered by changes in the following files:"
-          echo "${{ toJSON(github.event.commits[0].modified) }}"
+          echo "This workflow was triggered by changes in specific paths."
+          echo "Files changed in this event:"
+          echo "${{ github.event.commits[0].added }}"
+          echo "${{ github.event.commits[0].modified }}"
+          echo "${{ github.event.commits[0].removed }}"
