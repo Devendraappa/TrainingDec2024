@@ -1,3 +1,3 @@
 # TrainingDec2024
 
-updated
+updated latest
